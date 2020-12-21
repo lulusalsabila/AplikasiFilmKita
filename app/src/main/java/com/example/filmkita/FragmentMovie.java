@@ -36,7 +36,7 @@ import java.util.List;
 
 public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onSelectData, MovieAdapter.onSelectData {
 
-    private RecyclerView NowPlaying, FilmRecommend;
+    private RecyclerView Film;
     private FilmHorizontalAdapter filmHorizontalAdapter;
     private MovieAdapter movieAdapter;
     private ProgressDialog progressDialog;
@@ -80,10 +80,9 @@ public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onS
             searchPlate.setBackgroundColor(Color.TRANSPARENT);
         }
 
-
-        FilmRecommend = rootView.findViewById(R.id.film);
-        FilmRecommend.setLayoutManager(new LinearLayoutManager(getActivity()));
-        FilmRecommend.setHasFixedSize(true);
+        Film = rootView.findViewById(R.id.film);
+        Film.setLayoutManager(new LinearLayoutManager(getActivity()));
+        Film.setHasFixedSize(true);
 
         getMovie();
 
@@ -223,13 +222,13 @@ public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onS
     }
     private void showMovieHorizontal() {
         filmHorizontalAdapter = new FilmHorizontalAdapter(getActivity(), moviePlayNow, this);
-        NowPlaying.setAdapter(filmHorizontalAdapter);
+        Film.setAdapter(filmHorizontalAdapter);
         filmHorizontalAdapter.notifyDataSetChanged();
     }
 
     private void showMovie() {
         movieAdapter = new MovieAdapter(getActivity(), moviePopular, this);
-        FilmRecommend.setAdapter(movieAdapter);
+        Film.setAdapter(movieAdapter);
         movieAdapter.notifyDataSetChanged();
     }
 
