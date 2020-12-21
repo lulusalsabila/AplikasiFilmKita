@@ -80,16 +80,11 @@ public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onS
             searchPlate.setBackgroundColor(Color.TRANSPARENT);
         }
 
-        NowPlaying = rootView.findViewById(R.id.rvNowPlaying);
-        NowPlaying.setHasFixedSize(true);
-        NowPlaying.setLayoutManager(new CardSliderLayoutManager(getActivity()));
-        new CardSnapHelper().attachToRecyclerView(NowPlaying);
 
-        FilmRecommend = rootView.findViewById(R.id.FilmRecommend);
+        FilmRecommend = rootView.findViewById(R.id.film);
         FilmRecommend.setLayoutManager(new LinearLayoutManager(getActivity()));
         FilmRecommend.setHasFixedSize(true);
 
-        getMovieHorizontal();
         getMovie();
 
         return rootView;
