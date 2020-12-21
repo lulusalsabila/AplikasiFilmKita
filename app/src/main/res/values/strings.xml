@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Film Kita</string>
+    <string name="search_film">Looking For What?</string>
+    <string name="film_kita">Welcome to Film Kita!</string>
+    <string name="recomend_movie">Recommended Movie For You</string>
+    <string name="user">USER</string>
+</resources>
