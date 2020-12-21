@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Film Kita</string>
     <string name="search_film">Cari Film Apa?</string>
-    <string name="film_kita">Selamat Data di Film Kita!</string>
+    <string name="film_kita">Selamat Datang di Film Kita!</string>
     <string name="recomend_movie">Daftar Rekomendasi Film</string>
     <string name="user">USER</string>
 </resources>

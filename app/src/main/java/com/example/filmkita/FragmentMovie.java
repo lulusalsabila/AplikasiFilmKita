@@ -133,48 +133,6 @@ public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onS
                     }
                 });
     }
-    private void getMovieHorizontal() {
-        progressDialog.show();
-        AndroidNetworking.get(com.example.filmkita.networking.Api.BASEURL + com.example.filmkita.networking.Api.MOVIE_PLAYNOW + com.example.filmkita.networking.Api.APIKEY + com.example.filmkita.networking.Api.LANGUAGE)
-                .setPriority(Priority.HIGH)
-                .build()
-                .getAsJSONObject(new JSONObjectRequestListener() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            progressDialog.dismiss();
-                            JSONArray jsonArray = response.getJSONArray("results");
-                            for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                ModelMovie dataApi = new ModelMovie();
-                                SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMMM yyyy");
-                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
-                                String datePost = jsonObject.getString("release_date");
-
-                                dataApi.setId(jsonObject.getInt("id"));
-                                dataApi.setTitle(jsonObject.getString("title"));
-                                dataApi.setVoteAverage(jsonObject.getDouble("vote_average"));
-                                dataApi.setOverview(jsonObject.getString("overview"));
-                                dataApi.setReleaseDate(formatter.format(dateFormat.parse(datePost)));
-                                dataApi.setPosterPath(jsonObject.getString("poster_path"));
-                                dataApi.setBackdropPath(jsonObject.getString("backdrop_path"));
-                                dataApi.setPopularity(jsonObject.getString("popularity"));
-                                moviePlayNow.add(dataApi);
-                                showMovieHorizontal();
-                            }
-                        } catch (JSONException | ParseException e) {
-                            e.printStackTrace();
-                            Toast.makeText(getActivity(), "Gagal Menampilkan Data Film!", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-                        progressDialog.dismiss();
-                        Toast.makeText(getActivity(), "Tidak ada jaringan internet!", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
 
     private void getMovie() {
         progressDialog.show();
