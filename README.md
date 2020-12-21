@@ -20,7 +20,7 @@ mengganti bahasa, menyediakan button trailer yang url nya menuju youtube dan beb
 Aplikasi ini masih memiliki kekurangan yaitu seringkali akan menampilkan toast "gagal memuat data" 
 dan tampilan UI nya tidak terlalu baik, oleh karena itu saya memohon maaf kepada bapak, dikarenakan keterbatasan kemampuan saya.
 
-URL API : http://api.themoviedb.org/3/"
+URL API : https://api.themoviedb.org/3/movie/popular?api_key=0dde3e9896a8c299d142e214fcb636f8&language=en-US&page=1
 
 URL Github : https://github.com/lulusalsabila/AplikasiFilmKita
 
