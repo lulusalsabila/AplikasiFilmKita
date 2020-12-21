@@ -20,10 +20,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.filmkita.activities.DetailMovieActivity;
 import com.example.filmkita.adapter.MovieAdapter;
-import com.example.filmkita.adapter.FilmHorizontalAdapter;
 import com.example.filmkita.model.ModelMovie;
-import com.ramotion.cardslider.CardSliderLayoutManager;
-import com.ramotion.cardslider.CardSnapHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,10 +31,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onSelectData, MovieAdapter.onSelectData {
+public class FragmentMovie extends Fragment implements MovieAdapter.onSelectData {
 
     private RecyclerView Film;
-    private FilmHorizontalAdapter filmHorizontalAdapter;
     private MovieAdapter movieAdapter;
     private ProgressDialog progressDialog;
     private SearchView searchFilm;
@@ -177,11 +173,6 @@ public class FragmentMovie extends Fragment implements FilmHorizontalAdapter.onS
                         Toast.makeText(getActivity(), "Tidak ada jaringan internet!", Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-    private void showMovieHorizontal() {
-        filmHorizontalAdapter = new FilmHorizontalAdapter(getActivity(), moviePlayNow, this);
-        Film.setAdapter(filmHorizontalAdapter);
-        filmHorizontalAdapter.notifyDataSetChanged();
     }
 
     private void showMovie() {
