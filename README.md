@@ -26,5 +26,5 @@ URL Github : https://github.com/lulusalsabila/AplikasiFilmKita
 
 URL Youtube : 
 
-URL APK (Google Drive) : https://drive.google.com/drive/folders/1QupiTcYp8cNc4I8lOU_9vxQbHGOR5UK6?usp=sharing
+URL APK (Google Drive) : https://drive.google.com/drive/u/0/folders/1QupiTcYp8cNc4I8lOU_9vxQbHGOR5UK6
 
