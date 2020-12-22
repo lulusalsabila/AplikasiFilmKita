@@ -75,9 +75,9 @@ public class DetailMovieActivity extends AppCompatActivity {
                     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
                     progressDialog = new ProgressDialog(this);
-                    progressDialog.setTitle("Please Wait..");
+                    progressDialog.setTitle("Mohon Tunggu..");
                     progressDialog.setCancelable(false);
-                    progressDialog.setMessage("Trailer Loading..");
+                    progressDialog.setMessage("Sedang Loading Data..");
 
                     ratingBar = findViewById(R.id.ratingBar);
                     imgCover = findViewById(R.id.coveratas);
@@ -128,7 +128,7 @@ public class DetailMovieActivity extends AppCompatActivity {
                 String description = modelMovie.getOverview();
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 shareIntent.putExtra(Intent.EXTRA_TEXT, subject + "\n\n" + description + "\n\n" + movieURL);
-                startActivity(Intent.createChooser(shareIntent, "Share With :"));
+                startActivity(Intent.createChooser(shareIntent, "Bagikan :"));
             }
         });
 

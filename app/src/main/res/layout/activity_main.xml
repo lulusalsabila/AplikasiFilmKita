@@ -43,7 +43,6 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/bg_rounded"
             android:elevation="8dp"
             android:padding="5dp">
 
@@ -52,10 +51,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:bt_colorActive="#81c784"
+                app:bt_colorActive="@color/colorPrimaryDark"
                 app:bt_colorInactive="#78909c"
                 app:bt_icon="@drawable/ic_movie"
-                app:bt_shape="@drawable/tab_movie_color"
                 app:bt_title="Movie"
                 app:bt_titlePadding="5dp"
                 app:bt_titleSize="10sp" />
