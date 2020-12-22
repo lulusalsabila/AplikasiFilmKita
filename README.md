@@ -2,9 +2,10 @@
 Aplikasi Film Kita
 
 Nama :Lulu Salsabila
-Nim : 09031281823030
-Kelas : SI Bilingual 5B
 
+Nim : 09031281823030
+
+Kelas : SI Bilingual 5B
 
 
 Nama Aplikasi : Film Kita
